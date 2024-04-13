@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int MaxPairwiseProduct(int *p, int length);
+long long MaxPairwiseProduct(int *p, int length);
 
 int main()
 {
@@ -12,21 +12,22 @@ int main()
     {
         scanf("%d", &a[i]);
     }
-    int result = MaxPairwiseProduct(a, n);
-    printf("%d\n", result);
+    long long result = MaxPairwiseProduct(a, n);
+    printf("%I64d\n", result);
+    // 将%lld改为%I64d 这使得MingW不再报错： unknown conversion type character 'l' in format [-Wformat]
 
     return 0;
 }
 
-int MaxPairwiseProduct(int *p, int length)
+long long MaxPairwiseProduct(int *p, int length)
 {
-    int result = 0;
+    long long result = 0;
     for (int i = 0; i < length; i++)
     {
         for (int j = i + 1; j < length; j++)
         {
-            if (p[i] * p[j] > result)
-                result = p[i] * p[j];
+            if ((long long)p[i] * p[j] > result)
+                result = (long long)p[i] * p[j];
         }
     }
     return result;
