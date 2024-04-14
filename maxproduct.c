@@ -13,9 +13,8 @@ int main()
         scanf("%d", &a[i]);
     }
     long long result = MaxPairwiseProduct(a, n);
-    printf("%I64d\n", result);
+    printf("%lld\n", result);
     // 将%lld改为%I64d 这使得MingW不再报错： unknown conversion type character 'l' in format [-Wformat]
-
     return 0;
 }
 
