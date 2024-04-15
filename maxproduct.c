@@ -31,3 +31,6 @@ long long MaxPairwiseProduct(int *p, int length)
     }
     return result;
 }
+
+
+//FAST
