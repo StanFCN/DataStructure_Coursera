@@ -9,8 +9,8 @@ int main()
     {
         printf("Fibonaccinumber%d is %lld\n", n, Fibonacci_number(n));
     }
-    
-    
+
+
     return 0;
 }
 
@@ -23,10 +23,9 @@ long long Fibonacci_number(int n)
     else
         return Fibonacci_number(n - 1) + Fibonacci_number(n - 2);
 } */
-//fibonacci 40 waiting......
+// fibonacci 40 waiting......
 
-
-//可以计算时间
+// 可以计算时间
 #include <stdio.h>
 #include <time.h>
 
@@ -60,6 +59,3 @@ long long Fibonacci_number(int n)
     else
         return Fibonacci_number(n - 1) + Fibonacci_number(n - 2);
 }
-
-
-？？？
