@@ -30,6 +30,7 @@ long long Fibonacci_number(int n)
 #include <time.h>
 
 long long Fibonacci_number(int n);
+long long FastFibonacci_number(int n);
 
 int main()
 {
@@ -38,7 +39,7 @@ int main()
     while (scanf("%d", &n) != EOF)
     {
         start = clock(); // 获取开始时间
-        long long result = Fibonacci_number(n);
+        long long result = FastFibonacci_number(n);
         end = clock(); // 获取结束时间
 
         // 计算时间差
@@ -58,4 +59,18 @@ long long Fibonacci_number(int n)
     }
     else
         return Fibonacci_number(n - 1) + Fibonacci_number(n - 2);
+}
+
+long long FastFibonacci_number(int n)
+{   
+    if (n == 0) 
+    return 0;
+    long long F[n];
+    F[0] = 0;
+    F[1] = 1;
+    for (int i = 2; i <= n; i++)
+    {
+        F[i] = F[i - 2] + F[i - 1];
+    }
+    return F[n];
 }
