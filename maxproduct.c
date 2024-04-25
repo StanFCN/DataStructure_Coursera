@@ -76,3 +76,5 @@ long long FastMaxPairwiseProduct(int *p, int length)
     }
     return (long long)p[maxindex1] * p[maxindex2];
 }
+
+// 厉害了我的哥//
