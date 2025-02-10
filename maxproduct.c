@@ -38,7 +38,8 @@ int main()
         } */
 
     // 将%lld改为%I64d 这使得VScode不再报错： unknown conversion type character 'l' in format [-Wformat]
-    return 0;
+    printf("我累个韶钢\n");
+	return 0;
 }
 
 long long MaxPairwiseProduct(int *p, int length)
@@ -76,5 +77,3 @@ long long FastMaxPairwiseProduct(int *p, int length)
     }
     return (long long)p[maxindex1] * p[maxindex2];
 }
-
-// 厉害了我的哥//
